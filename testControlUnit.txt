@@ -1,4 +1,4 @@
-nputSetLoader: gvFormat.InputSetLoaderSimpleGVFormat
+# InputSetLoader: gvFormat.InputSetLoaderSimpleGVFormat
 
 # This file tests the Control Unit for a simple MIPS CPU with 
 # custom ALU op codes. Dont Care values are replaced with EXCLUDE
