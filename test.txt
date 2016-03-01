@@ -156,4 +156,61 @@ BEGIN Xori
 		RegWrite [1]
 		Halt [0]
 
+BEGIN Jump
+	INPUTS
+     		OpCode [2]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop EXCLUDE
+		ALUsrc EXCLUDE
+		RegDest EXCLUDE
+		Bne [0]
+		Branch [0]
+		Jump [1]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg EXCLUDE
+		RegWrite [0]
+		Halt [0]
+
+BEGIN Jal
+	INPUTS
+     		OpCode [3]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop EXCLUDE
+		ALUsrc EXCLUDE
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [1]
+		Jal [1]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Add
+	INPUTS
+     		OpCode [0]
+	 	functionCode [32]
+	OUTPUTS
+		ALUop [0]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
 
