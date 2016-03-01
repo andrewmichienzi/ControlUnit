@@ -270,4 +270,60 @@ BEGIN Jr
 		RegWrite [0]
 		Halt [0]
 
+BEGIN Nor
+	INPUTS
+     		OpCode [0]
+	 	functionCode [39]
+	OUTPUTS
+		ALUop [4]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Or
+	INPUTS
+     		OpCode [0]
+	 	functionCode [37]
+	OUTPUTS
+		ALUop [3]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Slt
+	INPUTS
+     		OpCode [0]
+	 	functionCode [42]
+	OUTPUTS
+		ALUop [15]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
 
