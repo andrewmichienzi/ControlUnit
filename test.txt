@@ -1,0 +1,62 @@
+# InputSetLoader: gvFormat.InputSetLoaderSimpleGVFormat
+
+# This file tests the Control Unit for a simple MIPS CPU with 
+# custom ALU op codes. Dont Care values are replaced with EXCLUDE
+# values in each test. All instructions are tested.
+
+BEGIN Addi
+	INPUTS
+     		OpCode [8]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [0]
+		ALUsrc [1]
+		RegDest [1]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Addiu
+	INPUTS
+     		OpCode [9]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [0]
+		ALUsrc [1]
+		RegDest [1]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Andi
+	INPUTS
+     		OpCode [12]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [2]
+		ALUsrc [1]
+		RegDest [1]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
