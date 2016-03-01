@@ -213,4 +213,61 @@ BEGIN Add
 		RegWrite [1]
 		Halt [0]
 
+BEGIN Addu
+	INPUTS
+     		OpCode [0]
+	 	functionCode [33]
+	OUTPUTS
+		ALUop [0]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN And
+	INPUTS
+     		OpCode [0]
+	 	functionCode [36]
+	OUTPUTS
+		ALUop [2]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Jr
+	INPUTS
+     		OpCode [0]
+	 	functionCode [8]
+	OUTPUTS
+		ALUop EXCLUDE
+		ALUsrc EXCLUDE
+		RegDest EXCLUDE
+		Bne [0]
+		Branch [0]
+		Jump [1]
+		Jal [0]
+		Jr [1]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg EXCLUDE
+		RegWrite [0]
+		Halt [0]
+
 
