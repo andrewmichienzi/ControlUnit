@@ -98,3 +98,62 @@ BEGIN Slti
 		MemToReg [0]
 		RegWrite [1]
 		Halt [0]
+
+BEGIN Sltiu
+	INPUTS
+     		OpCode [11]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [7]
+		ALUsrc [1]
+		RegDest [1]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Sw
+	INPUTS
+     		OpCode [43]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [0]
+		ALUsrc [1]
+		RegDest EXCLUDE
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [1]
+		MemToReg EXCLUDE
+		RegWrite [0]
+		Halt [0]
+
+BEGIN Xori
+	INPUTS
+     		OpCode [14]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [5]
+		ALUsrc [1]
+		RegDest [1]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+
