@@ -1,9 +1,65 @@
-# InputSetLoader: gvFormat.InputSetLoaderSimpleGVFormat
+#> InputSetLoader: gvFormat.InputSetLoaderSimpleGVFormat
 
 # This file tests the Control Unit for a simple MIPS CPU with 
 # custom ALU op codes. Dont Care values are replaced with EXCLUDE
 # values in each test. All instructions are tested.
 
+BEGIN Addi
+	INPUTS
+     		OpCode [8]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [0]
+		ALUsrc [1]
+		RegDest [1]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Addiu
+	INPUTS
+     		OpCode [9]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [0]
+		ALUsrc [1]
+		RegDest [1]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Andi
+	INPUTS
+     		OpCode [12]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [2]
+		ALUsrc [1]
+		RegDest [1]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
 
 BEGIN Beq
 	INPUTS
@@ -23,6 +79,7 @@ BEGIN Beq
 		MemToReg EXCLUDE
 		RegWrite [0]
 		Halt [0]
+
 BEGIN Bne
 	INPUTS
      		OpCode [5]
@@ -40,6 +97,25 @@ BEGIN Bne
 		MemWrite [0]
 		MemToReg EXCLUDE
 		RegWrite [0]
+		Halt [0]
+
+BEGIN Lw
+	INPUTS
+     		OpCode [35]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [0]
+		ALUsrc [1]
+		RegDest [1]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [1]
+		MemWrite [0]
+		MemToReg [1]
+		RegWrite [1]
 		Halt [0]
 
 BEGIN UpperImmediate
@@ -384,3 +460,40 @@ BEGIN Subu
 		RegWrite [1]
 		Halt [0]
 
+BEGIN Xor
+	INPUTS
+     		OpCode [0]
+	 	functionCode [38]
+	OUTPUTS
+		ALUop [5]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Halt
+	INPUTS
+     		OpCode [32]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop EXCLUDE
+		ALUsrc EXCLUDE
+		RegDest EXCLUDE
+		Bne EXCLUDE
+		Branch EXCLUDE
+		Jump EXCLUDE
+		Jal EXCLUDE
+		Jr EXCLUDE
+		MemRead EXCLUDE
+		MemWrite EXCLUDE
+		MemToReg EXCLUDE
+		RegWrite EXCLUDE
+		Halt [1]
