@@ -327,3 +327,60 @@ BEGIN Slt
 		RegWrite [1]
 		Halt [0]
 
+BEGIN Sltu
+	INPUTS
+     		OpCode [0]
+	 	functionCode [43]
+	OUTPUTS
+		ALUop [7]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Sub
+	INPUTS
+     		OpCode [0]
+	 	functionCode [34]
+	OUTPUTS
+		ALUop [1]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
+BEGIN Subu
+	INPUTS
+     		OpCode [0]
+	 	functionCode [35]
+	OUTPUTS
+		ALUop [1]
+		ALUsrc [0]
+		RegDest [0]
+		Bne [0]
+		Branch [0]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg [0]
+		RegWrite [1]
+		Halt [0]
+
