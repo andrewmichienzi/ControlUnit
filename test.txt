@@ -49,7 +49,7 @@ BEGIN Lw
 	OUTPUTS
 		ALUop [0]
 		ALUsrc [1]
-		RegDest [1]
+		RegDest [0]
 		Bne [0]
 		Branch [0]
 		Jump [0]
@@ -68,7 +68,7 @@ BEGIN Ori
 	OUTPUTS
 		ALUop [3]
 		ALUsrc [1]
-		RegDest [1]
+		RegDest [0]
 		Bne [0]
 		Branch [0]
 		Jump [0]
@@ -125,26 +125,7 @@ BEGIN Add
 	OUTPUTS
 		ALUop [0]
 		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN And
-	INPUTS
-     		OpCode [0]
-	 	functionCode [36]
-	OUTPUTS
-		ALUop [2]
-		ALUsrc [0]
-		RegDest [0]
+		RegDest [1]
 		Bne [0]
 		Branch [0]
 		Jump [0]
@@ -174,3 +155,4 @@ BEGIN Halt
 		MemToReg EXCLUDE
 		RegWrite EXCLUDE
 		Halt [1]
+
