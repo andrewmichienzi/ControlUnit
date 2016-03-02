@@ -30,12 +30,12 @@ lw $21, secondHex	# $21 = 65,535
 
 beq $20, $0, begin	# if $20 is zero, go to top; this should NOT happen
 
-beq $20, 131070, phase2	# if $20 is 65,535 * 2, go to phase2; this should NOT happen, if it does, we previously jumped to top 
+beq $20, 131070, end	# if $20 is 65,535 * 2, go to phase2; this should NOT happen, if it does, we previously jumped to top 
 	
 addi $8, $0, -65435	# $8 = -65,435
 lw $10, firstHex	# $10 = 65,535
 add $10, $10, $8	# $10 = 100
-beq $10, $21, phase2	# if $10 = 65,535 go to phase2; this should NOT happen
+beq $10, $21, end	# if $10 = 65,535 go to phase2; this should NOT happen
 
 beq $20, $21, initialize	# if $20 = $21 (65,535) then go to initialize
 
