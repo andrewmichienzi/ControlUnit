@@ -48,7 +48,7 @@ ori $12, 0x0110
 sw $11, 8($17)
 sw $12, 0($18)
 
-j phase2
+j end
 
 # This code should execute
 initialize:
@@ -66,33 +66,4 @@ lw $12, 0($18)
 
 j afterInit
 
-phase2:
-# Test the bne instruction
-#Should not jump
-bne $20, $21, end
-li $9, 83
-#should jump
-bne $21, $22, goodbne
-li $19, 87
-
-goodbne:
-#Now, test the bitwise with registers
-and $24, $22, $23
-nor $25, $1, $11
-or $26, $20, $22
-xor $27, $17, $18
-
-
-
-#Push some registers to memory so we can reuse them
-sw $24 0x20($1)
-sw $25 0x24($1)
-sw $26 0x28($1)
-sw $27 0x2C($1)
-sw $4, 0x30($1)
-sw $5, 0x34($1)
-
-
 end:
-
-
