@@ -72,7 +72,6 @@ li $9, 83
 #should jump
 bne $21, $22, goodbne
 li $19, 87
-j end
 
 goodbne:
 #Now, test the bitwise with registers
