@@ -20,6 +20,8 @@ lw $21, firstHex	# $21 = 0x0000FFFF
 lui $22, 0xFFFF		# $22 = 0xFFFF0000
 ori $23, $22, 0xFFFF	# $23 = 0xFFFFFFFF = 0xFFFF0000 | 0x0000FFFF 
 
+sub $29, $21, $22
+
 addi $20, $0, 0	        # Set $20 to zero
 add $20, $20, $21	# Add 65,535 to $20 
 
