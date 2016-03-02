@@ -11,45 +11,7 @@ BEGIN Addi
 	OUTPUTS
 		ALUop [0]
 		ALUsrc [1]
-		RegDest [1]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Addiu
-	INPUTS
-     		OpCode [9]
-	 	functionCode [0]
-	OUTPUTS
-		ALUop [0]
-		ALUsrc [1]
-		RegDest [1]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Andi
-	INPUTS
-     		OpCode [12]
-	 	functionCode [0]
-	OUTPUTS
-		ALUop [2]
-		ALUsrc [1]
-		RegDest [1]
+		RegDest [0]
 		Bne [0]
 		Branch [0]
 		Jump [0]
@@ -80,25 +42,6 @@ BEGIN Beq
 		RegWrite [0]
 		Halt [0]
 
-BEGIN Bne
-	INPUTS
-     		OpCode [5]
-	 	functionCode [0]
-	OUTPUTS
-		ALUop [1]
-		ALUsrc [0]
-		RegDest EXCLUDE
-		Bne [1]
-		Branch [1]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg EXCLUDE
-		RegWrite [0]
-		Halt [0]
-
 BEGIN Lw
 	INPUTS
      		OpCode [35]
@@ -106,7 +49,7 @@ BEGIN Lw
 	OUTPUTS
 		ALUop [0]
 		ALUsrc [1]
-		RegDest [1]
+		RegDest [0]
 		Bne [0]
 		Branch [0]
 		Jump [0]
@@ -118,25 +61,6 @@ BEGIN Lw
 		RegWrite [1]
 		Halt [0]
 
-BEGIN UpperImmediate
-	INPUTS
-     		OpCode [15]
-	 	functionCode [0]
-	OUTPUTS
-		ALUop [6]
-		ALUsrc [1]
-		RegDest [1]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
 BEGIN Ori
 	INPUTS
      		OpCode [13]
@@ -144,45 +68,7 @@ BEGIN Ori
 	OUTPUTS
 		ALUop [3]
 		ALUsrc [1]
-		RegDest [1]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Slti
-	INPUTS
-     		OpCode [10]
-	 	functionCode [0]
-	OUTPUTS
-		ALUop [15]
-		ALUsrc [1]
-		RegDest [1]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Sltiu
-	INPUTS
-     		OpCode [11]
-	 	functionCode [0]
-	OUTPUTS
-		ALUop [7]
-		ALUsrc [1]
-		RegDest [1]
+		RegDest [0]
 		Bne [0]
 		Branch [0]
 		Jump [0]
@@ -213,25 +99,6 @@ BEGIN Sw
 		RegWrite [0]
 		Halt [0]
 
-BEGIN Xori
-	INPUTS
-     		OpCode [14]
-	 	functionCode [0]
-	OUTPUTS
-		ALUop [5]
-		ALUsrc [1]
-		RegDest [1]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
 BEGIN Jump
 	INPUTS
      		OpCode [2]
@@ -251,25 +118,6 @@ BEGIN Jump
 		RegWrite [0]
 		Halt [0]
 
-BEGIN Jal
-	INPUTS
-     		OpCode [3]
-	 	functionCode [0]
-	OUTPUTS
-		ALUop EXCLUDE
-		ALUsrc EXCLUDE
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [1]
-		Jal [1]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
 BEGIN Add
 	INPUTS
      		OpCode [0]
@@ -277,197 +125,7 @@ BEGIN Add
 	OUTPUTS
 		ALUop [0]
 		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Addu
-	INPUTS
-     		OpCode [0]
-	 	functionCode [33]
-	OUTPUTS
-		ALUop [0]
-		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN And
-	INPUTS
-     		OpCode [0]
-	 	functionCode [36]
-	OUTPUTS
-		ALUop [2]
-		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Jr
-	INPUTS
-     		OpCode [0]
-	 	functionCode [8]
-	OUTPUTS
-		ALUop EXCLUDE
-		ALUsrc EXCLUDE
-		RegDest EXCLUDE
-		Bne [0]
-		Branch [0]
-		Jump [1]
-		Jal [0]
-		Jr [1]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg EXCLUDE
-		RegWrite [0]
-		Halt [0]
-
-BEGIN Nor
-	INPUTS
-     		OpCode [0]
-	 	functionCode [39]
-	OUTPUTS
-		ALUop [4]
-		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Or
-	INPUTS
-     		OpCode [0]
-	 	functionCode [37]
-	OUTPUTS
-		ALUop [3]
-		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Slt
-	INPUTS
-     		OpCode [0]
-	 	functionCode [42]
-	OUTPUTS
-		ALUop [15]
-		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Sltu
-	INPUTS
-     		OpCode [0]
-	 	functionCode [43]
-	OUTPUTS
-		ALUop [7]
-		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Sub
-	INPUTS
-     		OpCode [0]
-	 	functionCode [34]
-	OUTPUTS
-		ALUop [1]
-		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Subu
-	INPUTS
-     		OpCode [0]
-	 	functionCode [35]
-	OUTPUTS
-		ALUop [1]
-		ALUsrc [0]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
-
-BEGIN Xor
-	INPUTS
-     		OpCode [0]
-	 	functionCode [38]
-	OUTPUTS
-		ALUop [5]
-		ALUsrc [0]
-		RegDest [0]
+		RegDest [1]
 		Bne [0]
 		Branch [0]
 		Jump [0]
@@ -497,3 +155,4 @@ BEGIN Halt
 		MemToReg EXCLUDE
 		RegWrite EXCLUDE
 		Halt [1]
+
