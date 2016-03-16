@@ -61,6 +61,25 @@ BEGIN Lw
 		RegWrite [1]
 		Halt [0]
 
+BEGIN Bne
+	INPUTS
+     		OpCode [5]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [1]
+		ALUsrc [0]
+		RegDest EXCLUDE
+		Bne [1]
+		Branch [1]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg EXCLUDE
+		RegWrite [0]
+		Halt [0]
+
 BEGIN Ori
 	INPUTS
      		OpCode [13]
@@ -78,6 +97,25 @@ BEGIN Ori
 		MemWrite [0]
 		MemToReg [0]
 		RegWrite [1]
+		Halt [0]
+
+BEGIN Beq
+	INPUTS
+     		OpCode [4]
+	 	functionCode [0]
+	OUTPUTS
+		ALUop [1]
+		ALUsrc [0]
+		RegDest EXCLUDE
+		Bne [0]
+		Branch [1]
+		Jump [0]
+		Jal [0]
+		Jr [0]
+		MemRead [0]
+		MemWrite [0]
+		MemToReg EXCLUDE
+		RegWrite [0]
 		Halt [0]
 
 BEGIN Sw
