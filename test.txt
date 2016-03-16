@@ -6,22 +6,22 @@
 
 BEGIN Addi
 	INPUTS
-     		OpCode [8]
-	 	functionCode [0]
+     		OpCode 8
+	 	functionCode 0
 	OUTPUTS
-		ALUop [0]
-		ALUsrc [1]
-		RegDest [0]
-		Bne [0]
-		Branch [0]
-		Jump [0]
-		Jal [0]
-		Jr [0]
-		MemRead [0]
-		MemWrite [0]
-		MemToReg [0]
-		RegWrite [1]
-		Halt [0]
+		ALUop 0
+		ALUsrc 1
+		RegDest 0
+		Bne 0
+		Branch 0
+		Jump 0
+		Jal 0
+		Jr 0
+		MemRead 0
+		MemWrite 0
+		MemToReg 0
+		RegWrite 1
+		Halt 0
 
 BEGIN Beq
 	INPUTS
