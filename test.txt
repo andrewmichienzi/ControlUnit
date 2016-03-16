@@ -144,7 +144,7 @@ BEGIN UpperImmediate
 	OUTPUTS
 		ALUop [6]
 		ALUsrc [1]
-		RegDest [1]
+		RegDest [0]
 		Bne [0]
 		Branch [0]
 		Jump [0]
