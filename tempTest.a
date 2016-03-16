@@ -15,18 +15,38 @@
 ###########################################################################
 
 
-addi $16, $16, 3     # $16 = 3
 
-addi $17, $16, 5     # $17 = 8
+.data
+firstHex:    65535
+secondHex:   0
 
-add  $18, $17, $16
-addi $18, $16, 5
+lw $21, firstHex
+lw $22, secondHex
 
-beq $16, 17, end
+bne $21, $22, intialize
+j end
 
-add $18, $18, $18
-add $19, $16, $17
+# This should only be reached after the values have been initialized
+afterInit:
+lui $11, 0x1001
+ori $12, 0x0110
+sw $11, 8($17)
+sw $12, 0($18)
+
+# This code should execute
+initialize:
+sw $10, val0		# $10 = 100; index0 is now 100
+add $15, $10, $10	# $15 = 200
+sw $15, val4
+
+# Load addresses into $17 and $19
+la $17, val0		
+la $18, val4
+
+# Load val4 (val4 = 200) using offsets
+lw $11, 16($17)	
+lw $12, 0($18)	
+
+j afterInit
 
 end:
-
-addi $20, $16, 4
