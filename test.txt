@@ -22,6 +22,8 @@ BEGIN Addi
 		MemToReg [0]
 		RegWrite [1]
 		Halt [0]
+		SLT [0]
+		SLTU [0]
 
 BEGIN Beq
 	INPUTS
@@ -41,6 +43,8 @@ BEGIN Beq
 		MemToReg EXCLUDE
 		RegWrite [0]
 		Halt [0]
+		SLT [0]
+		SLTU [0]
 
 BEGIN Lw
 	INPUTS
@@ -60,6 +64,8 @@ BEGIN Lw
 		MemToReg [1]
 		RegWrite [1]
 		Halt [0]
+		SLT [0]
+		SLTU [0]
 
 BEGIN Ori
 	INPUTS
@@ -79,6 +85,8 @@ BEGIN Ori
 		MemToReg [0]
 		RegWrite [1]
 		Halt [0]
+		SLT [0]
+		SLTU [0]
 
 BEGIN Sw
 	INPUTS
@@ -98,6 +106,8 @@ BEGIN Sw
 		MemToReg EXCLUDE
 		RegWrite [0]
 		Halt [0]
+		SLT [0]
+		SLTU [0]
 
 BEGIN Jump
 	INPUTS
@@ -117,6 +127,8 @@ BEGIN Jump
 		MemToReg EXCLUDE
 		RegWrite [0]
 		Halt [0]
+		SLT [0]
+		SLTU [0]
 
 BEGIN Add
 	INPUTS
@@ -136,6 +148,8 @@ BEGIN Add
 		MemToReg [0]
 		RegWrite [1]
 		Halt [0]
+		SLT [0]
+		SLTU [0]
 
 BEGIN Halt
 	INPUTS
@@ -155,4 +169,6 @@ BEGIN Halt
 		MemToReg EXCLUDE
 		RegWrite EXCLUDE
 		Halt [1]
+		SLT [0]
+		SLTU [0]
 
