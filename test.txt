@@ -137,12 +137,12 @@ BEGIN Add
 		RegWrite [1]
 		Halt [0]
 
-BEGIN Addiu
+BEGIN UpperImmediate
 	INPUTS
-     		OpCode [9]
+     		OpCode [15]
 	 	functionCode [0]
 	OUTPUTS
-		ALUop [0]
+		ALUop [6]
 		ALUsrc [1]
 		RegDest [1]
 		Bne [0]
