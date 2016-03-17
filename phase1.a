@@ -6,27 +6,38 @@
 # Good luck!
 ###########################################################################
 	
+
 .data
 firstHex:    65535
+
 secondHex:   0
 	
 # Random values to be used later on
+
 val0:      1
+
 val1:      101
+
 val2:      1048576
+
 val3:      103
+
 val4:      0
+
 
 .text
 
 # Here comes the fun stuff
 begin:
-lw $21, firstHex	# $21 = 0x0000FFFF
+lw $21, firstHex	# 
+$21 = 0x0000FFFF
 lui $22, 0xFFFF		# $22 = 0xFFFF0000
 ori $23, $22, 0xFFFF	# $23 = 0xFFFFFFFF = 0xFFFF0000 | 0x0000FFFF 
 
 addi $20, $0, 0	        # Set $20 to zero
+
 add $20, $20, $21	# Add 65,535 to $20 
+
 
 sw $21, val0
 sw $21, secondHex	# secondHex should now also be 65,535
