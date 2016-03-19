@@ -26,11 +26,11 @@ add $20, $20, $21	# Add 65,535 to $20
 sw $21, val0
 sw $21, secondHex	# secondHex should now also be 65,535
 add $21, $0, $0		# $21 = 0
-lw $21, secondHex	# $21 = 65,535
+lw $21, secondHex	# $21 = 65,53
 	
 addi $8, $0, -65435	# $8 = -65,435
 lw $10, firstHex	# $10 = 65,535
-add $10, $10, $8	# $10 = 100
+lw $11, firstHex	                # $10 = 100
 
 slt $15, $21, $10
 
