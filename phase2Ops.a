@@ -34,9 +34,9 @@ beq $20, $0, begin	# if $20 is zero, go to top; this should NOT happen
 beq $20, 131070, phase2	# if $20 is 65,535 * 2, go to phase2; this should NOT happen, if it does, we previously jumped to top 
 	
 addi $8, $0, -65435	# $8 = -65,435
-lw $10, firstHex	# $10 = 65,535
-add $10, $10, $8	# $10 = 100
-beq $10, $21, phase2	# if $10 = 65,535 go to phase2; this should NOT happen
+lw $6, firstHex	# $6 = 65,535
+add $6, $6, $8	# $6 = 100
+beq $6, $21, phase2	# if $6 = 65,535 go to phase2; this should NOT happen
 
 beq $20, $21, initialize	# if $20 = $21 (65,535) then go to initialize
 
@@ -59,8 +59,8 @@ j phase2
 
 # This code should execute
 initialize:
-sw $10, val0		# $10 = 100; index0 is now 100
-add $15, $10, $10	# $15 = 200
+sw $6, val0		# $6 = 100; index0 is now 100
+add $15, $6, $6	# $15 = 200
 sw $15, val4
 
 # Load addresses into $17 and $19
