@@ -32,34 +32,6 @@ addi $8, $0, -65435	# $8 = -65,435
 lw $10, firstHex	# $10 = 65,535
 add $10, $10, $8	# $10 = 100
 
-j end
-beq $10, $21, end       # if $10 = 65,535 go to phase2; this should NOT happen
-
-beq $20, $21, end	# if $20 = $21 (65,535) then go to initialize
-
-# This should only be reached after the values have been initialized
-afterInit:
-lui $11, 0x1001
-ori $12, 0x0110
-sw $11, 8($17)
-sw $12, 0($18)
-
-j end
-
-# This code should execute
-initialize:
-sw $10, val0		# $10 = 100; index0 is now 100
-add $15, $10, $10	# $15 = 200
-sw $15, val4
-
-# Load addresses into $17 and $19
-la $17, val0		
-la $18, val4
-
-# Load val4 (val4 = 200) using offsets
-lw $11, 16($17)	
-lw $12, 0($18)	
-
-end:
+slt $15, $21, $10
 
 
