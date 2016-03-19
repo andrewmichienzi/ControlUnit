@@ -29,6 +29,12 @@ val4:      0
 
 # Here comes the fun stuff
 begin:
+lw $21, firstHex	# $21 = 0x0000FFFF
+lui $22, 0xFFFF		# $22 = 0xFFFF0000
+ori $23, $22, 0xFFFF	# $23 = 0xFFFFFFFF = 0xFFFF0000 | 0x0000FFFF 
+
+sw $21, val0
+sw $21, secondHex	# secondHex should now also be 65,535
 
 addi $13, $0, 5	        # Set $20 to zero
 addi $2, $0, 6	        # Set $20 to zero
@@ -44,7 +50,7 @@ addi $11, $0, 888        # Set $20 to zero
 addiu $12, $0, 15
 addi $14, $0, 12
 
-addu $13, $3, $7
+addu $24, $3, $7
 and $14, $5, $11
 andi $15, $6, 14
 nor $16, $5, $8
@@ -58,7 +64,5 @@ phase2:
 ori $18, $3, 66
 sub $19, $6, $10
 subu $20, $6, $10
-xor $21, $7, $11
-xori $22, $9, 259
 
 finish:
