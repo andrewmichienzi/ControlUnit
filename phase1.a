@@ -42,14 +42,23 @@ addi $9, $0, 26	        # Set $20 to zero
 addi $10, $0, 38	        # Set $20 to zero
 addi $11, $0, 888        # Set $20 to zero
 addiu $12, $0, 15
+addi $14, $0, 12
 
 addu $13, $3, $7
 and $14, $5, $11
 andi $15, $6, 14
 nor $16, $5, $8
 or $17, $6, $7
+
+beq $6, $7, finish
+beq $14, $4, phase2
+j finish
+
+phase2:
 ori $18, $3, 66
 sub $19, $6, $10
 subu $20, $6, $10
 xor $21, $7, $11
 xori $22, $9, 259
+
+finish:
