@@ -51,14 +51,14 @@ addiu $12, $0, 15
 addi $14, $0, 12
 
 addu $24, $3, $7
-and $14, $5, $11
+and $$13, $5, $11
 andi $15, $6, 14
-nor $16, $5, $8
+nor $5, $5, $8
 or $17, $6, $7
 
-beq $6, $7, finish
-beq $14, $4, phase2
-j finish
+bne $4, $12, finish
+j phase2
+beq $14, $4, finish
 
 phase2:
 ori $18, $3, 66
