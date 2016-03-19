@@ -37,7 +37,7 @@ lw $10, firstHex	# $10 = 65,535
 add $10, $10, $8	# $10 = 100
 beq $10, $21, end       # if $10 = 65,535 go to phase2; this should NOT happen
 
-beq $20, $21, initialize	# if $20 = $21 (65,535) then go to initialize
+beq $20, $21, end	# if $20 = $21 (65,535) then go to initialize
 
 # This should only be reached after the values have been initialized
 afterInit:
@@ -61,8 +61,6 @@ la $18, val4
 # Load val4 (val4 = 200) using offsets
 lw $11, 16($17)	
 lw $12, 0($18)	
-
-j afterInit
 
 end:
 
